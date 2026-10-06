@@ -1,0 +1,38 @@
+name: Bug report
+description: Report a reproducible problem
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Do not include secrets, private traffic, or unauthorized test data.
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What happened, and what did you expect instead?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+    validations:
+      required: true
+  - type: input
+    id: burp-version
+    attributes:
+      label: Burp Suite version
+    validations:
+      required: true
+  - type: input
+    id: java-version
+    attributes:
+      label: Java version
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs
+      render: shell
